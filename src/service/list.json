@@ -1,6 +1,6 @@
 {
   "firstDate": {
-    "one": [
+    "oneSection": [
       {
         "food": "Картопля",
         "weight": "150 г."
@@ -38,7 +38,7 @@
         "weight": "45 г."
       }
     ],
-    "two": [
+    "twoSection": [
       {
         "food": "Молоко",
         "weight": "200 г."
@@ -52,7 +52,7 @@
         "weight": "200 г."
       }
     ],
-    "three": [
+    "threeSection": [
       {
         "food": "Снеки",
         "weight": "55 г."
