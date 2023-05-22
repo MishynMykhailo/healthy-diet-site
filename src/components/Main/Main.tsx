@@ -1,7 +1,9 @@
 import React from "react";
-
-const Main: React.FC = () => {
-  return <main>Main</main>;
+interface IProps {
+  children: any;
+}
+const Main: React.FC<IProps> = (IProps) => {
+  return <main>{IProps.children}</main>;
 };
 
 export default Main;
