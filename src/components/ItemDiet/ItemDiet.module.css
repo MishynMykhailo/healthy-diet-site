@@ -1,3 +1,17 @@
 .li {
   list-style: none;
+  display: flex;
+  gap: 10px;
+}
+.input {
+}
+.label {
+  display: flex;
+  gap: 10px;
+}
+.weight {
+  max-width: 100%;
+  text-align: right;
+}
+.food {
 }
