@@ -1,13 +1,13 @@
 .li {
-  list-style: none;
   display: flex;
-  gap: 10px;
 }
+.li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .input {
 }
 .label {
-  display: flex;
-  gap: 10px;
 }
 .weight {
   max-width: 100%;
