@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import s from "./ItemDiet.module.css";
 
 interface IProps {
@@ -37,13 +37,13 @@ const ItemDiet: React.FC<IProps> = ({ date }) => {
     selectId.forEach((id) => {
       localStorage.setItem(`selectId_${id}`, "true");
     });
-  }, [selectId, clearLocalStorage]);
+  }, [selectId]);
 
-  function clearLocalStorage() {
+  const clearLocalStorage = useCallback(() => {
     selectId.forEach((id) => {
       localStorage.removeItem(`selectId_${id}`);
     });
-  }
+  }, [selectId]);
 
   useEffect(() => {
     const midnightTime = getMidnightTime();
@@ -56,7 +56,7 @@ const ItemDiet: React.FC<IProps> = ({ date }) => {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, []);
+  }, [clearLocalStorage]);
 
   const getMidnightTime = () => {
     const currentDate = new Date();
