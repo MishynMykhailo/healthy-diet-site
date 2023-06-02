@@ -37,13 +37,13 @@ const ItemDiet: React.FC<IProps> = ({ date }) => {
     selectId.forEach((id) => {
       localStorage.setItem(`selectId_${id}`, "true");
     });
-  }, [selectId]);
+  }, [selectId, clearLocalStorage]);
 
-  const clearLocalStorage = () => {
+  function clearLocalStorage() {
     selectId.forEach((id) => {
       localStorage.removeItem(`selectId_${id}`);
     });
-  };
+  }
 
   useEffect(() => {
     const midnightTime = getMidnightTime();
